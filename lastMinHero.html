@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Last Minute Hero</title>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+  <div id="startScreen">
+    <h1>Last Minute Hero</h1>
+    <div class="hero-icon">🐧</div>
+    <p>You're a brave penguin on a one-minute dungeon dash!</p>
+    <button onclick="startGame()">Start Game</button>
+  </div>
+
+  <div id="game">
+    <h1>Last Minute Hero</h1>
+    <div class="hero-icon">🐧</div>
+    <p>⏳ Time Left: <span id="timer">60</span>s</p>
+    <p>💎 Score: <span id="score">0</span></p>
+    <div class="doors">
+      <button onclick="nextRoom()">⬅️ Go Left</button>
+      <button onclick="nextRoom()">⬆️ Go Forward</button>
+      <button onclick="nextRoom()">➡️ Go Right</button>
+    </div>
+    <div id="log"></div>
+    <button id="restartButton" onclick="restartGame()">🔁 Restart</button>
+    <div id="audio-controls">
+      <button onclick="toggleMute()" id="muteButton">🔊 Mute</button>
+    </div>
+  </div>
+
+  <audio id="sound-monster" src="https://actions.google.com/sounds/v1/human_voices/man_grunt.ogg"></audio>
+  <audio id="sound-treasure" src="https://actions.google.com/sounds/v1/cartoon/cartoon_boing.ogg"></audio>
+  <audio id="sound-trap" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+  <audio id="sound-empty" src="https://actions.google.com/sounds/v1/cartoon/cartoon_cowbell.ogg"></audio>
+  <audio id="sound-gameover" src="https://actions.google.com/sounds/v1/cartoon/concussive_drum_hit.ogg"></audio>
+  <audio id="bg-music" src="GM.mp3" loop preload="auto"></audio>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
